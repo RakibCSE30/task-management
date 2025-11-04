@@ -1,0 +1,11 @@
+GET / → "Task Management API is running!"
+
+GET /tasks → returns list of 5 tasks (see tasks-response.json)
+
+GET /task/1 → returns single task with id 1
+
+GET /task/999 → 404 { "error": "Task not found" }
+
+GET /task/abc → 400 { "error": "Invalid ID format" }
+
+GET /health → { "status": "healthy", "uptime": <process.uptime()> }
